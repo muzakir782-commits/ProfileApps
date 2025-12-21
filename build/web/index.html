@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Personal Profile Form</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Student Profile Information</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Inline style for button layout -->
+    <style>
+        .button-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
+
+<div class="container">
     <h2>Student Profile Information</h2>
+
     <form action="ProfileServlet" method="post">
+
         <label class="label">Name:</label>
         <input type="text" name="name" required>
 
@@ -27,7 +39,17 @@
         <label class="label">Self Introduction:</label>
         <textarea name="intro" rows="4"></textarea>
 
-        <button type="submit">Submit Profile</button>
+        <!-- Buttons -->
+        <div class="button-row">
+            <!-- Left -->
+            <a href="viewProfiles.jsp">
+                <button type="button"> View All Profiles</button>
+            </a>
+
+            <!-- Right -->
+            <button type="submit">Submit Profile</button>
+        </div>
+
     </form>
 </div>
 
